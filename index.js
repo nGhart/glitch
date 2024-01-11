@@ -32,7 +32,7 @@ const unsubscribe = (data) => {
 };
 
 app.get("/webhook", (req, res) => {
-  const verify_token = process.env.VERIFY_TOKEN;
+  const verify_token = verifywhatsapp;
 
   let mode = req.query["hub.mode"];
   let token = req.query["hub.verify_token"];
