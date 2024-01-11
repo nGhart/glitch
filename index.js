@@ -137,7 +137,7 @@ async function handleDeliveryStatus(entry) {
 
 function handleReceivedMessage(entry) {
   const {
-    changes: y[{ value: { metadata = {}, messages = [{}] } = {} } = {}],
+    changes: [{ value: { metadata = {}, messages = [{}] } = {} } = {}],
   } = entry;
 
   if (!metadata.phone_number_id || !messages[0]) {
